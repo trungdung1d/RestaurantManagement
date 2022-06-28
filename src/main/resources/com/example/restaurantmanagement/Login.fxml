@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="740.0" style="-fx-background-color: #2e323b #2e323b;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelmanagement.Login">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="459.0" prefHeight="500.0" prefWidth="353.0" style="-fx-background-color: #BEBFC1 #BEBFC1;">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #517CC0; -fx-background-radius: 5px;">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/facebook.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="LOGIN WITH FACEBOOK">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="70.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #64CCF1 #64CCF1; -fx-background-radius: 5px;">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/twitter.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="LOGIN WITH TWITTER">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #FFDCAE; -fx-background-radius: 5px;">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/instagram.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label text="LOGIN WITH INSTAGRAM">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #DF4930; -fx-background-radius: 5px;">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/google.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="LOGIN WITH GOOGLE">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="32.0" layoutY="85.0" prefHeight="23.0" prefWidth="98.0" text="User Login" textFill="#f8efef">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="28.0" layoutY="135.0" prefHeight="35.0" prefWidth="300.0" style="-fx-border-color: #BeBFc1; -fx-background-radius: 5px; -fx-border-radius: 5px;">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@res/icons8-user-24.png" />
+               </image>
+            </ImageView>
+            <TextField prefHeight="27.0" prefWidth="212.0" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="28.0" layoutY="193.0" prefHeight="35.0" prefWidth="300.0" style="-fx-border-color: #BeBFc1; -fx-background-radius: 5px; -fx-border-radius: 5px;">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@res/icons8-lock-24.png" />
+               </image>
+            </ImageView>
+            <PasswordField promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <Pane layoutX="-1.0" layoutY="419.0" prefHeight="81.0" prefWidth="463.0" style="-fx-background-color: #BEBFC1;">
+         <children>
+            <JFXButton layoutX="1.0" layoutY="13.0" prefHeight="45.0" prefWidth="127.0" text="REGISTER" underline="true">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="241.0" layoutY="13.0" prefHeight="45.0" prefWidth="170.0" text="FORGET PASSWORD?" underline="true">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Button layoutX="29.0" layoutY="254.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #e45652 #e45652; -fx-background-radius: 5px;" text="Log in" textFill="#ebebeb" />
+   </children>
+</AnchorPane>
