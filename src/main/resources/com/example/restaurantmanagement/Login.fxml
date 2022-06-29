@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="740.0" style="-fx-background-color: #2e323b #2e323b;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelmanagement.Login">
+<AnchorPane prefHeight="500.0" prefWidth="740.0" style="-fx-background-color: #2e323b #2e323b;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.ManagerLoginController">
    <children>
       <VBox alignment="CENTER_LEFT" layoutX="459.0" prefHeight="500.0" prefWidth="353.0" style="-fx-background-color: #BEBFC1 #BEBFC1;">
          <children>
@@ -100,7 +100,7 @@
                   <Image url="@res/icons8-user-24.png" />
                </image>
             </ImageView>
-            <TextField prefHeight="27.0" prefWidth="212.0" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+            <TextField fx:id="userField" prefHeight="27.0" prefWidth="212.0" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="14.0" />
                </font>
@@ -123,23 +123,23 @@
                   <Image url="@res/icons8-lock-24.png" />
                </image>
             </ImageView>
-            <PasswordField promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+            <PasswordField fx:id="passField" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
       <Pane layoutX="-1.0" layoutY="419.0" prefHeight="81.0" prefWidth="463.0" style="-fx-background-color: #BEBFC1;">
          <children>
-            <JFXButton layoutX="1.0" layoutY="13.0" prefHeight="45.0" prefWidth="127.0" text="REGISTER" underline="true">
+            <JFXButton layoutX="1.0" layoutY="13.0" onAction="#Register" prefHeight="45.0" prefWidth="127.0" text="REGISTER" underline="true">
                <font>
                   <Font name="Microsoft Sans Serif" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="241.0" layoutY="13.0" prefHeight="45.0" prefWidth="170.0" text="FORGET PASSWORD?" underline="true">
+            <JFXButton layoutX="241.0" layoutY="13.0" onAction="#ForgetPass" prefHeight="45.0" prefWidth="170.0" text="FORGET PASSWORD?" underline="true">
                <font>
                   <Font name="Microsoft Sans Serif" size="13.0" />
                </font>
             </JFXButton>
          </children>
       </Pane>
-      <Button layoutX="29.0" layoutY="254.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #e45652 #e45652; -fx-background-radius: 5px;" text="Log in" textFill="#ebebeb" />
+      <Button layoutX="29.0" layoutY="254.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="45.0" prefWidth="100.0" style="-fx-background-color: #e45652 #e45652; -fx-background-radius: 5px;" text="Log in" textFill="#ebebeb" />
    </children>
 </AnchorPane>

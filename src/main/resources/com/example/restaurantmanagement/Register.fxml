@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3347;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.ManagerResgisterController">
+    <children>
+        <Label layoutX="178.0" layoutY="35.0" text="Resgister" textFill="#2196f3">
+            <font>
+                <Font name="System Bold" size="48.0" />
+            </font>
+        </Label>
+        <Button fx:id="SignUp" layoutX="113.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleSignUpAction" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #2196f3;" text="Sign Up" textFill="WHITE" />
+        <Button fx:id="login" layoutX="296.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #ffffff;" text="Login" textFill="#2196f3" />
+        <HBox layoutX="52.0" layoutY="126.0" prefHeight="40.0" prefWidth="251.0">
+            <children>
+                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@res/icons8-user-24.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                    </HBox.margin>
+                </ImageView>
+            <JFXTextField fx:id="username" prefHeight="25.0" prefWidth="205.0" promptText="Enter your username" unFocusColor="WHITE" />
+            </children>
+        </HBox>
+        <HBox layoutX="94.0" layoutY="180.0" prefHeight="40.0" prefWidth="213.0">
+         <children>
+            <JFXPasswordField fx:id="pass" prefHeight="25.0" prefWidth="208.0" promptText="Enter your password" unFocusColor="WHITE" />
+         </children>
+        </HBox>
+          <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="61.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@res/icons8-lock-24.png" />
+              </image>
+          </ImageView>
+      <JFXTextField fx:id="idField" layoutX="94.0" layoutY="232.0" prefHeight="25.0" prefWidth="205.0" promptText="Enter your ID" unFocusColor="WHITE" />
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="61.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@res/icons8-lock-24.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
