@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="675.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.hotelmanagement.DashBoardController">
+<AnchorPane prefHeight="675.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.DashBoardController">
    <children>
       <AnchorPane layoutX="15.0" layoutY="10.0" prefHeight="95.0" prefWidth="690.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -32,7 +32,7 @@
             </Label>
             <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="89.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@HotelManagement/src/main/resources/com/example/hotelmanagement/res/icons8-customer-30.png" />
+                  <Image url="@res/icons8-customer-30.png" />
                </image>
             </ImageView>
          </children>
@@ -51,7 +51,7 @@
             </Label>
             <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="89.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@HotelManagement/src/main/resources/com/example/hotelmanagement/res/icons8-cancel-48.png" />
+                  <Image url="@res/icons8-cancel-48.png" />
                </image>
             </ImageView>
          </children>
@@ -70,7 +70,7 @@
             </Label>
             <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="89.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@HotelManagement/src/main/resources/com/example/hotelmanagement/res/icons8-ok-48.png" />
+                  <Image url="@res/icons8-ok-48.png" />
                </image>
             </ImageView>
          </children>
@@ -89,7 +89,7 @@
             </Label>
             <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="146.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@HotelManagement/src/main/resources/com/example/hotelmanagement/res/icons8-love-for-money-64.png" />
+                  <Image url="@res/icons8-love-for-money-64.png" />
                </image>
             </ImageView>
          </children>
@@ -108,7 +108,7 @@
             </Label>
             <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="148.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@HotelManagement/src/main/resources/com/example/hotelmanagement/res/icons8-bank-card-euro-48.png" />
+                  <Image url="@res/icons8-bank-card-euro-48.png" />
                </image>
             </ImageView>
          </children>

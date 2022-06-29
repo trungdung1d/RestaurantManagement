@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3347;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.ManagerForgotPass">
+    <children>
+        <Label layoutX="162.0" layoutY="45.0" text="Forgot" textFill="#2196f3">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="282.0" layoutY="45.0" text="Password" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="98.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@res/icons8-lock-24.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="98.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@res/icons8-question-24.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="98.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@res/icons8-user-24.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="save" layoutX="154.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleSaveAction" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #2196f3;" text="Save" textFill="WHITE" />
+        <Button fx:id="login" layoutX="332.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #ffffff;" text="Login" textFill="#2196f3" />
+      <JFXTextField fx:id="userField" layoutX="141.0" layoutY="138.0" prefHeight="25.0" prefWidth="191.0" promptText="Enter your username" />
+      <JFXTextField fx:id="iDField" layoutX="141.0" layoutY="188.0" prefHeight="25.0" prefWidth="191.0" promptText="Enter your ID" />
+      <JFXPasswordField fx:id="passField" layoutX="141.0" layoutY="237.0" prefHeight="25.0" prefWidth="191.0" promptText="Enter your new password" />
+    </children>
+</AnchorPane>

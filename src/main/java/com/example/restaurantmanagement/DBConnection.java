@@ -8,16 +8,16 @@ public class DBConnection {
     public static  Connection connection = null;
 
     public static Connection getConnections() {
-        if (connection != null) {
-            System.out.println("Connected");
-        }else {
-            try {
-                String dbURL = "jdbc:sqlserver://GALAXY:1433;encrypt=false;databaseName=Restaurant_Management;user=sa;password=123";
-                Connection connection = DriverManager.getConnection(dbURL);
-            } catch (SQLException ex) {
-                System.err.println("Cannot connect database, " + ex);
+        try {
+            String dbURL = "jdbc:sqlserver://GALAXY:1433;encrypt=false;databaseName=Restaurant_Management;user=sa;password=123";
+            Connection connection = DriverManager.getConnection(dbURL);
+            if (connection != null) {
+                System.out.println("Connected");
+                return connection;
             }
-            return connection;
+        } catch (SQLException ex) {
+            System.err.println("Cannot connect database, " + ex);
+
         }
         return null;
     }
