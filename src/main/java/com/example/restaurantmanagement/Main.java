@@ -36,7 +36,7 @@ public class Main extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.setTitle("Hotel Management System");
-            primaryStage.setScene(new Scene(root, 740, 500));
+            primaryStage.setScene(new Scene(root, 850, 500));
 
             primaryStage.setX(140);
             primaryStage.setY(130);

@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="740.0" style="-fx-background-color: #2e323b #2e323b;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.ManagerLoginController">
+<AnchorPane prefHeight="500.0" prefWidth="740.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.ManagerLoginController">
    <children>
-      <VBox alignment="CENTER_LEFT" layoutX="459.0" prefHeight="500.0" prefWidth="353.0" style="-fx-background-color: #BEBFC1 #BEBFC1;">
+      <VBox alignment="CENTER_LEFT" layoutX="459.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #2e323b #2e323b #2e323b #2e323b;">
          <children>
             <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #517CC0; -fx-background-radius: 5px;">
                <children>
@@ -88,7 +88,7 @@
             </HBox>
          </children>
       </VBox>
-      <Label layoutX="32.0" layoutY="85.0" prefHeight="23.0" prefWidth="98.0" text="User Login" textFill="#f8efef">
+      <Label layoutX="32.0" layoutY="85.0" prefHeight="23.0" prefWidth="98.0" text="User Login" textFill="#6f2a2a">
          <font>
             <Font size="18.0" />
          </font>
@@ -97,7 +97,7 @@
          <children>
             <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@res/icons8-user-24.png" />
+                  <Image url="@res/icons8-customer-30.png" />
                </image>
             </ImageView>
             <TextField fx:id="userField" prefHeight="27.0" prefWidth="212.0" promptText="username" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
@@ -120,13 +120,13 @@
          <children>
             <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@res/icons8-lock-24.png" />
+                  <Image url="@res/icons8-key-50.png" />
                </image>
             </ImageView>
             <PasswordField fx:id="passField" promptText="password" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
          </children>
       </HBox>
-      <Pane layoutX="-1.0" layoutY="419.0" prefHeight="81.0" prefWidth="463.0" style="-fx-background-color: #BEBFC1;">
+      <Pane layoutX="-2.0" layoutY="419.0" prefHeight="81.0" prefWidth="461.0" style="-fx-background-color: #BE #2e323b #2e323b #2e323b #2e323b #2e323b #2e323b #2e323b #2e323bBFC1;">
          <children>
             <JFXButton layoutX="1.0" layoutY="13.0" onAction="#Register" prefHeight="45.0" prefWidth="127.0" text="REGISTER" underline="true">
                <font>
