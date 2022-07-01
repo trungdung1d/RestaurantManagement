@@ -45,7 +45,7 @@ public class ManagerLoginController implements Initializable {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 if (resultSet.next()) {
                     Main.showAlert(Alert.AlertType.INFORMATION, "Login Success!", "Successfully Logged In!");
-                    m.changeScene(event, "Dashboard.fxml", "Admin Dashboard");
+                    m.changeScene(event, "homepage.fxml", "Admin Dashboard");
                 } else {
                     Main.showAlert(Alert.AlertType.ERROR, "Login Failed!", "Incorrect Username or Password!");
                 }
