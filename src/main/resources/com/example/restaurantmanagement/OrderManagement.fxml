@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="675.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.hotelmanagement.RoomController">
+<AnchorPane prefHeight="675.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.RoomController">
    <children>
       <AnchorPane layoutX="15.0" layoutY="8.0" prefHeight="85.0" prefWidth="739.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -21,7 +21,7 @@
             </Label>
             <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="17.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Restaurant/src/main/resources/com/example/restaurant/res/icons8-bill-32.png" />
+                  <Image url="@res/icons8-bill-32.png" />
                </image>
             </ImageView>
          </children>
@@ -32,7 +32,7 @@
             <Button fx:id="add" layoutX="673.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleAddAction" text="Add " />
             <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@HotelManagement/src/main/resources/com/example/hotelmanagement/res/icons8-search-32.png" />
+                  <Image url="@res/icons8-search-32.png" />
                </image>
             </ImageView>
             <TableView fx:id="roomTable" layoutX="28.0" layoutY="70.0" onMouseClicked="#clickItem" prefHeight="470.0" prefWidth="708.0">
