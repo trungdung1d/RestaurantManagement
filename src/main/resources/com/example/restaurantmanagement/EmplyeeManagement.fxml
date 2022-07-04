@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="665.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.EmployeeManagementController">
+<AnchorPane prefHeight="667.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.EmployeeManagementController">
    <children>
-      <AnchorPane layoutX="15.0" prefHeight="67.0" prefWidth="791.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane prefHeight="49.0" prefWidth="765.0" style="-fx-background-color: #DCDCDC;">
          <children>
             <Label layoutX="52.0" layoutY="12.0" text="Manage Emplyee">
                <font>
@@ -26,15 +26,15 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="15.0" layoutY="65.0" prefHeight="600.0" prefWidth="791.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane layoutY="47.0" prefHeight="620.0" prefWidth="765.0" style="-fx-background-color: #ffffff;" styleClass="bodybg" stylesheets="@CSS/TableView.css">
          <children>
-            <TextField fx:id="search" layoutX="268.0" layoutY="23.0" prefHeight="25.0" prefWidth="221.0" promptText="Search Anything" />
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="248.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="search" layoutX="241.0" layoutY="23.0" prefHeight="25.0" prefWidth="221.0" promptText="Search Anything" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="221.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@res/icons8-search-32.png" />
                </image>
             </ImageView>
-            <TableView fx:id="employeeTable" layoutX="28.0" layoutY="71.0" prefHeight="470.0" prefWidth="745.0">
+            <TableView fx:id="employeeTable" layoutX="6.0" layoutY="75.0" prefHeight="516.0" prefWidth="745.0" style="-fx-background-color: white;">
               <columns>
                 <TableColumn fx:id="idCol" prefWidth="34.666683197021484" text="ID" />
                   <TableColumn fx:id="nameCol" minWidth="4.0" prefWidth="82.6666488647461" text="Name" />
@@ -47,7 +47,7 @@
                   <TableColumn fx:id="actionCol" prefWidth="133.3333740234375" text="Action" />
               </columns>
             </TableView>
-            <JFXButton fx:id="add" buttonType="RAISED" layoutX="711.0" layoutY="22.0" onAction="#handleAddAction" style="-fx-background-radius: 15;" text="Add">
+            <JFXButton fx:id="add" buttonType="RAISED" layoutX="657.0" layoutY="22.0" onAction="#handleAddAction" style="-fx-background-radius: 15;" text="Add">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>

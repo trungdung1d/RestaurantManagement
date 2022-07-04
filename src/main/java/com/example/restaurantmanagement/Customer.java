@@ -1,4 +1,4 @@
-package com.example.demo11;
+package com.example.restaurantmanagement;
 
 public class Customer {
     private String name;

@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="675.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.BillController">
     <children>
-        <AnchorPane layoutX="15.0" layoutY="8.0" prefHeight="59.0" prefWidth="786.0" style="-fx-background-color: #ffffff;">
+        <AnchorPane layoutX="15.0" prefHeight="67.0" prefWidth="786.0" style="-fx-background-color: #DCDCDC;">
             <children>
                 <Label layoutX="68.0" layoutY="12.0" text="Manage Bill">
                     <font>
@@ -25,9 +25,9 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="15.0" layoutY="95.0" prefHeight="570.0" prefWidth="786.0" style="-fx-background-color: #ffffff;">
+        <AnchorPane layoutX="15.0" layoutY="67.0" prefHeight="598.0" prefWidth="786.0" stylesheets="@CSS/TableView.css">
             <children>
-                <TextField fx:id="search" layoutX="61.0" layoutY="23.0" prefHeight="25.0" prefWidth="212.0" promptText="Type Name" />
+                <TextField fx:id="search" layoutX="61.0" layoutY="23.0" prefHeight="25.0" prefWidth="212.0" promptText="Search Anything" />
                 <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@res/icons8-search-32.png" />

@@ -6,21 +6,19 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.HomePageController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.HomePageController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
       <BorderPane fx:id="borderpane" prefHeight="695.0" prefWidth="971.0" styleClass="bodybg" stylesheets="@CSS/CSS1.css">
          <left>
-            <AnchorPane prefHeight="638.0" prefWidth="232.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="617.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" stylesheets="@CSS/Button.css" BorderPane.alignment="CENTER">
                <children>
-                  <VBox prefHeight="617.0" prefWidth="233.0" spacing="10.0">
+                  <VBox prefHeight="617.0" prefWidth="210.0" spacing="10.0" stylesheets="@CSS/Button.css">
                      <children>
-                        <AnchorPane prefHeight="149.0" prefWidth="280.0" style="-fx-background-color: #ffffff;">
+                        <AnchorPane prefHeight="142.0" prefWidth="210.0" style="-fx-background-color: #A9A9A9;">
                            <children>
                               <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="21.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -40,45 +38,93 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <JFXButton fx:id="dashbtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createDash" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #ffffff;" text="Dashboard">
+                        <JFXButton fx:id="dashbtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createDash" prefHeight="44.0" prefWidth="245.0" text="Dashboard">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-dashboard-layout-48.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="employeebtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#employeeBtn" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #ffffff;" text="Employee Management">
+                        <JFXButton fx:id="employeebtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#employeeBtn" prefHeight="44.0" prefWidth="245.0" text="Employee Management">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-employees-64.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="customerbtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#customerBtn" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #ffffff;" text="Customer Management">
+                        <JFXButton fx:id="customerbtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#customerBtn" prefHeight="44.0" prefWidth="245.0" text="Customer Management">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-customers-64.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="wareHouse" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#warhouseBtn" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #ffffff;" text="Warehouse Management">
+                        <JFXButton fx:id="wareHouse" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#warhouseBtn" prefHeight="44.0" prefWidth="249.0" text="Warehouse Management">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-warehouse-64.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="bill" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createCustomerBill" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #ffffff;" text="Customer Bill">
+                        <JFXButton fx:id="bill" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createCustomerBill" prefHeight="44.0" prefWidth="245.0" text="Customer Bill">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-bill-32.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="bill1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createCustomerBill" prefHeight="44.0" prefWidth="225.0" style="-fx-background-color: #ffffff;" text="Order Management">
+                        <JFXButton fx:id="bill1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createCustomerBill1" prefHeight="44.0" prefWidth="245.0" text="Order Management">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-order-64.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
-                        <JFXButton fx:id="bill2" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createCustomerBill" prefHeight="39.0" prefWidth="225.0" style="-fx-background-color: #ffffff;" text="Table Status">
+                        <JFXButton fx:id="table" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTable" prefHeight="39.0" prefWidth="245.0" text="Table Status">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-table-50.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
-                        <JFXButton onAction="#creatStatistic" text="Statistics">
+                        <JFXButton alignment="BASELINE_LEFT" onAction="#creatStatistic" prefHeight="44.0" prefWidth="245.0" text="Statistics">
                            <font>
                               <Font size="18.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@res/icons8-statistics-30.png" />
+                                 </image></ImageView>
+                           </graphic>
                         </JFXButton>
                      </children>
                   </VBox>
@@ -108,4 +154,4 @@
          </top>
       </BorderPane>
    </children>
-</StackPane>
+</AnchorPane>

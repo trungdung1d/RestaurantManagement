@@ -1,0 +1,10 @@
+ .round-lbl{
+    -fx-background-color: #FE7A79;
+    -fx-background-radius: 100%;
+ }
+
+ .round-box{
+    -fx-border-radius: 100%;
+    -fx-background-radius: 100%;
+    -fx-border-width: 5px;
+ }

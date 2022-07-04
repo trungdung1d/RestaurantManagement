@@ -1,4 +1,4 @@
-package com.example.demo11;
+package com.example.restaurantmanagement;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;

@@ -23,41 +23,14 @@ import java.util.ResourceBundle;
 public class HomePageController implements Initializable {
 
     @FXML
-    private Label adminName;
-
-    @FXML
-    private JFXButton bill;
-
-    @FXML
-    private JFXButton bill1;
-
-    @FXML
-    private JFXButton bill2;
-
-    @FXML
-    private JFXButton customerbtn;
-
-    @FXML
-    private JFXButton dashbtn;
-
-    @FXML
-    private JFXButton employeebtn;
-
-    @FXML
-    private AnchorPane holdPane;
-
-    @FXML
     private ImageView logout;
-
-    @FXML
-    private JFXButton wareHouse;
 
     @FXML
     private BorderPane borderpane;
 
     @FXML
     void createCustomerBill(ActionEvent event) {
-        windowLoad("RestaurantBill.fxml");
+        windowLoad("Bill.fxml");
     }
 
     @FXML
@@ -67,7 +40,7 @@ public class HomePageController implements Initializable {
 
     @FXML
     void customerBtn(ActionEvent event) {
-        windowLoad("addCustomer.fxml");
+        windowLoad("ManagerCustomer.fxml");
     }
 
     @FXML
@@ -76,8 +49,13 @@ public class HomePageController implements Initializable {
     }
 
     @FXML
+    void createCustomerBill1(ActionEvent event) {
+        windowLoad("Dish.fxml");
+    }
+
+    @FXML
     void creatStatistic(ActionEvent event) {
-        windowLoad("Barchart.fxml");
+        windowLoad("Statistic.fxml");
     }
 
     @FXML
@@ -86,6 +64,11 @@ public class HomePageController implements Initializable {
         Stage stage = (Stage) logout.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.centerOnScreen();
+    }
+
+    @FXML
+    void createTable(ActionEvent event) {
+
     }
 
     @FXML

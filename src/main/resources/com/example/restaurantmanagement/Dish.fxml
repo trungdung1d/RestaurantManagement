@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="675.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.DishController">
+<AnchorPane prefHeight="675.0" prefWidth="800.0" stylesheets="@CSS/TableView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.DishController">
     <children>
-        <AnchorPane layoutX="15.0" layoutY="8.0" prefHeight="59.0" prefWidth="786.0" style="-fx-background-color: #ffffff;">
+        <AnchorPane layoutX="15.0" prefHeight="67.0" prefWidth="786.0" style="-fx-background-color: #DCDCDC;">
             <children>
                 <Label layoutX="68.0" layoutY="12.0" text="Manage Dish">
                     <font>
@@ -26,24 +26,31 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="15.0" layoutY="95.0" prefHeight="570.0" prefWidth="786.0" style="-fx-background-color: #ffffff;">
+        <AnchorPane layoutX="15.0" layoutY="67.0" prefHeight="598.0" prefWidth="786.0">
             <children>
                 <TextField fx:id="search" layoutX="61.0" layoutY="23.0" prefHeight="25.0" prefWidth="212.0" promptText="Type Name" />
-                <Button fx:id="add" layoutX="673.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleAddAction" text="Add " />
+                <Button fx:id="add" layoutX="661.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleAddAction" text="Add ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons8-add-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
                 <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@res/icons8-search-32.png" />
                     </image>
                 </ImageView>
-                <TableView fx:id="dishTable" layoutX="28.0" layoutY="70.0" prefHeight="470.0" prefWidth="708.0">
+                <TableView fx:id="dishTable" layoutX="28.0" layoutY="70.0" prefHeight="470.0" prefWidth="708.0" style="-fx-background-color: white;">
                <columns>
-                  <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
-                  <TableColumn fx:id="nameCol" prefWidth="75.0" text="Date" />
-                  <TableColumn fx:id="amountCol" maxWidth="88.66670227050781" minWidth="-1.0" prefWidth="75.33332824707031" text="Amount" />
-                  <TableColumn fx:id="vatCol" maxWidth="88.66670227050781" minWidth="-1.0" prefWidth="75.33332824707031" text="VAT" />
-                  <TableColumn fx:id="priceCol" maxWidth="88.66670227050781" minWidth="-1.0" prefWidth="75.33332824707031" text="Price" />
-                  <TableColumn fx:id="totalPriceCol" maxWidth="88.66670227050781" minWidth="-1.0" prefWidth="75.33332824707031" text="Total Price" />
-                   <TableColumn fx:id="actionCol" prefWidth="133.3333740234375" text="Action" />
+                  <TableColumn fx:id="idCol" prefWidth="83.99999618530273" text="ID" />
+                  <TableColumn fx:id="nameCol" prefWidth="116.66668701171875" text="Name" />
+                  <TableColumn fx:id="amountCol" maxWidth="88.66670227050781" minWidth="-1.0" prefWidth="68.00007629394531" text="Amount" />
+                  <TableColumn fx:id="vatCol" maxWidth="100.66668701171875" minWidth="-1.0" prefWidth="78.0" text="VAT" />
+                  <TableColumn fx:id="priceCol" maxWidth="97.33331298828125" minWidth="-1.0" prefWidth="89.33331298828125" text="Price" />
+                  <TableColumn fx:id="totalPriceCol" maxWidth="144.00009155273438" minWidth="-1.0" prefWidth="99.99996948242188" text="Total Price" />
+                   <TableColumn fx:id="actionCol" prefWidth="174.66668701171875" text="Action" />
                </columns>
                 </TableView>
             </children>
