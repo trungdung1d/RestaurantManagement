@@ -34,11 +34,11 @@ public class StatisticController implements Initializable {
         for (int i=0;i<=12;i++) a[i] = 0.0;
         Connection connection = DBConnection.getConnections();
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM staff");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM bill");
             ResultSet rs = statement.executeQuery();
             while (rs.next()){
 
-                a[rs.getDate(3).getMonth() + 1] += rs.getDouble(6);
+                a[rs.getDate(2).getMonth() + 1] += rs.getDouble(6);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -60,10 +60,10 @@ public class StatisticController implements Initializable {
         Connection connection = DBConnection.getConnections();
 
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM staff");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM bill");
             ResultSet rs = statement.executeQuery();
             while (rs.next()){
-                a[rs.getDate(3).getYear()-100] += rs.getDouble(6);
+                a[rs.getDate(2).getYear()-100] += rs.getDouble(6);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

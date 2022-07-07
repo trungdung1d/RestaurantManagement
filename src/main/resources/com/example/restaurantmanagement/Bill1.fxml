@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.BillEditController">
+    <children>
+        <AnchorPane fx:id="rootAnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@CSS/CSS.css">
+            <children>
+                <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="331.0" prefWidth="565.0" style="-fx-background-color: rgba(76, 75, 80, 0.4); -fx-background-radius: 25;">
+                    <children>
+                        <Button fx:id="confirm" layoutX="196.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="25.0" prefWidth="64.0" text="Confirm">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.22608695924282074" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+                        <Label layoutX="29.0" layoutY="78.0" prefHeight="25.0" prefWidth="70.0" text="Amount:">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.22608695924282074" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@res/icons8-checked-identification-documents-50.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="120.0" prefHeight="25.0" prefWidth="70.0" text="VAT:">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.22608695924282074" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@res/icons8-phone-50.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="amountField" layoutX="151.0" layoutY="78.0" prefHeight="25.0" prefWidth="387.0" style="-fx-text-fill: white; -fx-background-color: #7f8fa650; -fx-background-radius: 7;">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.05652173236012459" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </TextField>
+                        <TextField fx:id="vatField" layoutX="151.0" layoutY="120.0" prefHeight="25.0" prefWidth="381.0" style="-fx-text-fill: white; -fx-background-color: #7f8fa650; -fx-background-radius: 7;">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.05652173236012459" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </TextField>
+                        <Button fx:id="closebtn" layoutX="310.0" layoutY="265.0" mnemonicParsing="false" onAction="#CloseBtn" prefHeight="25.0" prefWidth="64.0" text="Close">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.22608695924282074" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+                        <TextField fx:id="priceField" layoutX="151.0" layoutY="167.0" prefHeight="25.0" prefWidth="387.0" style="-fx-text-fill: white; -fx-background-color: #7f8fa650; -fx-background-radius: 7;">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.05652173236012459" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </TextField>
+                        <Label layoutX="29.0" layoutY="167.0" prefHeight="25.0" prefWidth="70.0" text="Price:">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.22608695924282074" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@res/icons8-salary-64.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="210.0" prefHeight="25.0" prefWidth="100.0" text="Total Price:">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.22608695924282074" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@res/icons8-salary-64.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="totalPriceField" layoutX="151.0" layoutY="210.0" prefHeight="25.0" prefWidth="387.0" style="-fx-text-fill: white; -fx-background-color: #7f8fa650; -fx-background-radius: 7;">
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.05652173236012459" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </TextField>
+                  <DatePicker fx:id="datePicker" layoutX="151.0" layoutY="27.0" prefHeight="25.0" prefWidth="218.0" />
+                  <Label layoutX="51.0" layoutY="31.0" text="Date:" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons8-date-64.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane>
+                    <children>
+                        <HBox layoutX="450.0" prefHeight="30.0" prefWidth="100.0" styleClass="closePane">
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="387.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="229.0" style="-fx-text-fill: black;" styleClass="titleText" text="DISH INFO">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@res/icons8-employee-64.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic></Label>
+                            </children>
+                            <padding>
+                                <Insets left="5.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

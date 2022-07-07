@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -25,7 +26,7 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="15.0" layoutY="67.0" prefHeight="598.0" prefWidth="786.0" stylesheets="@CSS/TableView.css">
+        <AnchorPane layoutX="15.0" layoutY="67.0" prefHeight="598.0" prefWidth="786.0" styleClass="bodybg" stylesheets="@CSS/TableView.css">
             <children>
                 <TextField fx:id="search" layoutX="61.0" layoutY="23.0" prefHeight="25.0" prefWidth="212.0" promptText="Search Anything" />
                 <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
@@ -33,7 +34,7 @@
                         <Image url="@res/icons8-search-32.png" />
                     </image>
                 </ImageView>
-                <TableView fx:id="billTable" layoutX="39.0" layoutY="71.0" prefHeight="470.0" prefWidth="708.0">
+                <TableView fx:id="billTable" layoutX="39.0" layoutY="71.0" prefHeight="470.0" prefWidth="708.0" style="-fx-background-color: white;">
                <columns>
                   <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
                   <TableColumn fx:id="dateCol" prefWidth="111.0" text="Date" />
@@ -43,6 +44,15 @@
                   <TableColumn fx:id="totalPriceCol" maxWidth="330.5" minWidth="-1.0" prefWidth="173.5" text="Total Price" />
                </columns>
                 </TableView>
+            <JFXButton fx:id="add" buttonType="RAISED" layoutX="609.0" layoutY="23.0" onAction="#handleAddAction" text="Add">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onDragDetected="#handleAddAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons8-add-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
             </children>
         </AnchorPane>
     </children>

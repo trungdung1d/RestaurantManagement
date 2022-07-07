@@ -10,19 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="630.0" style="-fx-background-color: #2D3347;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.ManagerCustomer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="630.0" styleClass="bodybg" stylesheets="@CSS/TableView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.ManagerCustomer">
     <children>
-        <Label layoutX="64.0" layoutY="8.0" text="Manager" textFill="#2196f3">
-            <font>
-                <Font name="System Bold" size="30.0" />
-            </font>
-        </Label>
         <Button fx:id="add" layoutX="56.0" layoutY="267.0" mnemonicParsing="false" onAction="#AddCustomer" style="-fx-background-color: #2196f3;" text="Add Customer" textFill="WHITE" />
-        <Label layoutX="206.0" layoutY="8.0" text="Customer" textFill="WHITE">
-            <font>
-                <Font name="System Bold" size="30.0" />
-            </font>
-        </Label>
         <TextField fx:id="nameText" layoutX="48.0" layoutY="86.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Name" style="-fx-background-color: White;">
          <font>
             <Font name="System Bold Italic" size="12.0" />
@@ -62,10 +52,24 @@
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font></TextField>
-      <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="19.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@User.png" />
-         </image>
-      </ImageView>
+      <AnchorPane prefHeight="58.0" prefWidth="630.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+              <Label layoutX="59.0" layoutY="6.0" prefWidth="126.0" text="Manager" textFill="#2196f3">
+                  <font>
+                      <Font name="System Bold" size="30.0" />
+                  </font>
+              </Label>
+              <Label layoutX="193.0" layoutY="6.0" text="Customer" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="30.0" />
+                  </font>
+              </Label>
+            <ImageView fitHeight="37.0" fitWidth="44.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@res/icons8-customer-30.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>

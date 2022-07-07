@@ -68,7 +68,7 @@ public class HomePageController implements Initializable {
 
     @FXML
     void createTable(ActionEvent event) {
-
+        windowLoad("Table1.fxml");
     }
 
     @FXML

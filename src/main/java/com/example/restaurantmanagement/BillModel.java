@@ -17,6 +17,9 @@ public class BillModel {
         TotalPrice = totalPrice;
     }
 
+    public BillModel(String date, String amount, double VAT, double price, double totalPrice) {
+    }
+
     public String getID() {
         return ID;
     }

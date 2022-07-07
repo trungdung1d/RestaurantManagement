@@ -57,7 +57,9 @@ public class BillController implements Initializable {
     private ObservableList<BillModel> Table = FXCollections.observableArrayList();
 
     @FXML
-    void handleAddAction(ActionEvent event) {}
+    void handleAddAction(ActionEvent event) {
+        addBillInfo();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -68,10 +70,10 @@ public class BillController implements Initializable {
         vatCol.setCellValueFactory(new PropertyValueFactory<BillModel, Double>("VAT"));
         priceCol.setCellValueFactory(new PropertyValueFactory<BillModel, Double>("Price"));
         totalPriceCol.setCellValueFactory(new PropertyValueFactory<BillModel, Double>("TotalPrice"));
-        showEmployeeTable();
+        showTable();
     }
 
-    public void showEmployeeTable(){
+    public void showTable(){
         //Table.clear();
         Connection connection = DBConnection.getConnections();
         try {
@@ -87,9 +89,9 @@ public class BillController implements Initializable {
                     Double PRICE = Double.parseDouble(resultSet.getString("PRICE"));
                     Double TOTALPRICE = Double.parseDouble(resultSet.getString("TOTALPRICE"));
 
-                    BillModel empTable = new BillModel(ID, DATE, AMOUNT, VAT, PRICE, TOTALPRICE);
+                    BillModel bllTable = new BillModel(ID, DATE, AMOUNT, VAT, PRICE, TOTALPRICE);
 
-                    Table.add(empTable);
+                    Table.add(bllTable);
                 }
                 billTable.getItems().setAll(Table);
             }
@@ -136,5 +138,36 @@ public class BillController implements Initializable {
             x.set(primaryStage.getX());
             y.set(primaryStage.getY());
         });
+    }
+
+    private void addBillInfo() {
+        BillModel bill = new BillModel();
+        Connection connection = DBConnection.getConnections();
+        try {
+            if (!connection.isClosed()) {
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(Main.class.getResource("Bill1.fxml"));
+                Parent viewContact = loader.load();
+                BillEditController controller = (BillEditController) loader.getController();
+                Scene scene = new Scene(viewContact);
+
+                Stage window = new Stage();
+                window.setScene(scene);
+                window.initStyle(StageStyle.UNDECORATED);
+
+                stagePosition(window, viewContact);
+
+                window.showAndWait();
+                bill = controller.billModel();
+                Table.add(bill);
+                billTable.setItems(Table);
+
+            }
+
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            DBConnection.closeConnections();
+        }
     }
 }
