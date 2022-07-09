@@ -51,6 +51,8 @@ public class BillEditController {
 
     public static LocalDate day;
 
+    public static String currentBillID;
+
     @FXML
     void CloseBtn(ActionEvent event) {
         Stage stage = (Stage) closebtn.getScene().getWindow();
@@ -61,20 +63,23 @@ public class BillEditController {
     void handleConfirm(ActionEvent event) throws SQLException {
         Connection connection = DBConnection.getConnections();
         day = datePicker.getValue();
+        String ID = idField.getText();
+        currentBillID = ID;
         String Amount = amountField.getText();
         Double Vat = Double.parseDouble(vatField.getText());
         Double Price = Double.parseDouble(priceField.getText());
-        Double TotalPrice = Double.parseDouble(totalPriceField.getText());
-        if (day.equals("null") || Amount.isEmpty() || Vat.equals("null") || Price.equals("null") || TotalPrice.equals("null")){
+        Double TotalPrice = Price + Price * Vat;
+        if (day.equals("null") || Amount.isEmpty() || Vat.equals("null") || Price.equals("null")){
             Main.showJFXAlert(rootPane, rootAnchorPane, "warning", "Warning!", "Text field can't be empty!", JFXDialog.DialogTransition.CENTER);
         } else {
-            String sql = "INSERT INTO bill (DATE, AMOUNT, VAT, PRICE, TOTALPRICE) VALUES(?,?,?,?,?)";
+            String sql = "INSERT INTO bill (ID, DATE, AMOUNT, VAT, PRICE, TOTALPRICE) VALUES(?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setDate(1, Date.valueOf(day));
-            preparedStatement.setString(2, Amount);
-            preparedStatement.setDouble(3, Vat);
-            preparedStatement.setDouble(4, Price);
-            preparedStatement.setDouble(5,TotalPrice);
+            preparedStatement.setString(1, ID);
+            preparedStatement.setDate(2, Date.valueOf(day));
+            preparedStatement.setString(3, Amount);
+            preparedStatement.setDouble(4, Vat);
+            preparedStatement.setDouble(5, Price);
+            preparedStatement.setDouble(6,TotalPrice);
 
 
             try {
@@ -86,12 +91,10 @@ public class BillEditController {
                 DBConnection.closeConnections();
             }
         }
-        Stage stage = (Stage) closebtn.getScene().getWindow();
-        stage.close();
     }
 
     public BillModel billModel (){
-        BillModel bll = new BillModel(datePicker.getValue()+"",
+        BillModel bll = new BillModel(idField.getText() ,datePicker.getValue()+"",
                 amountField.getText(),
                 Double.parseDouble(vatField.getText()),
                 Double.parseDouble(priceField.getText()),

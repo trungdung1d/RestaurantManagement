@@ -36,12 +36,13 @@
                 </ImageView>
                 <TableView fx:id="billTable" layoutX="39.0" layoutY="71.0" prefHeight="470.0" prefWidth="708.0" style="-fx-background-color: white;">
                <columns>
-                  <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
-                  <TableColumn fx:id="dateCol" prefWidth="111.0" text="Date" />
-                  <TableColumn fx:id="amountCol" maxWidth="137.5" minWidth="-1.0" prefWidth="115.5" text="Amount" />
-                  <TableColumn fx:id="vatCol" maxWidth="178.5" minWidth="-1.0" prefWidth="102.5" text="VAT" />
-                  <TableColumn fx:id="priceCol" maxWidth="167.5" minWidth="-1.0" prefWidth="129.5" text="Price" />
-                  <TableColumn fx:id="totalPriceCol" maxWidth="330.5" minWidth="-1.0" prefWidth="173.5" text="Total Price" />
+                  <TableColumn fx:id="idCol" prefWidth="46.666656494140625" text="ID" />
+                  <TableColumn fx:id="dateCol" prefWidth="99.33331298828125" text="Date" />
+                  <TableColumn fx:id="amountCol" maxWidth="156.66668701171875" minWidth="-1.0" prefWidth="52.666656494140625" text="Amount" />
+                  <TableColumn fx:id="vatCol" maxWidth="212.0" minWidth="-1.0" prefWidth="74.0" text="VAT" />
+                  <TableColumn fx:id="priceCol" maxWidth="273.33331298828125" minWidth="-1.0" prefWidth="120.6666259765625" text="Price" />
+                  <TableColumn fx:id="totalPriceCol" maxWidth="371.33343505859375" minWidth="-1.0" prefWidth="119.33334350585938" text="Total Price" />
+                  <TableColumn fx:id="actionCol" prefWidth="192.66668701171875" text="Action" />
                </columns>
                 </TableView>
             <JFXButton fx:id="add" buttonType="RAISED" layoutX="609.0" layoutY="23.0" onAction="#handleAddAction" text="Add">

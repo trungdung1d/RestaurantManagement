@@ -23,10 +23,7 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,6 +77,30 @@ public class EmployeeManagementController implements Initializable {
     void handleAddAction(ActionEvent event) {
         addEmployeeInfo();
     }
+
+//    public void refreshTable(){
+//        Table.clear();
+//        Connection connection = DBConnection.getConnections();
+//        try {
+//            String sql = "SELECT * FROM staff";
+//            PreparedStatement statement = connection.prepareStatement(sql);
+//            ResultSet rs = statement.executeQuery();
+//            while (rs.next()){
+//                Table.add(new EmployeeManagementModel(rs.getString("ID"),
+//                          rs.getString("NAME"),
+//                          rs.getString("DATE"),
+//                          rs.getString("PHONE"),
+//                          rs.getString("ADDRESS"),
+//                           Double.parseDouble(rs.getString("SALARY")),
+//                          rs.getString("JOB"),
+//                          rs.getString("STATUS")));
+//                employeeTable.setItems(Table);
+//            }
+//        }catch (SQLException e){
+//            e.printStackTrace();
+//        }
+//
+//    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

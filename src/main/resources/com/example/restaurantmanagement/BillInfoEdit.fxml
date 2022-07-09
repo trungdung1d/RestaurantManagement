@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.BillEditController">
+<StackPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurantmanagement.BillEditController1">
     <children>
         <AnchorPane fx:id="rootAnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@CSS/CSS.css">
             <children>
@@ -113,20 +113,20 @@
                                 </ImageView>
                             </graphic>
                         </Label>
-                  <DatePicker fx:id="datePicker" layoutX="151.0" layoutY="75.0" prefHeight="25.0" prefWidth="218.0" />
-                  <Label layoutX="51.0" layoutY="79.0" text="Date:" />
-                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="30.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@res/icons8-date-64.png" />
-                     </image>
-                  </ImageView>
-                  <TextField fx:id="idField" layoutX="154.0" layoutY="26.0" prefHeight="25.0" prefWidth="381.0" style="-fx-background-color: #7f8fa650; -fx-text-fill: white; -fx-background-radius: 7;" />
-                  <Label layoutX="51.0" layoutY="30.0" text="ID:" />
-                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="30.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@res/icons8-key-50.png" />
-                     </image>
-                  </ImageView>
+                        <DatePicker fx:id="datePicker" layoutX="151.0" layoutY="75.0" prefHeight="25.0" prefWidth="218.0" />
+                        <Label layoutX="51.0" layoutY="79.0" text="Date:" />
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="30.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@res/icons8-date-64.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="idField" layoutX="154.0" layoutY="26.0" prefHeight="25.0" prefWidth="381.0" style="-fx-background-color: #7f8fa650; -fx-text-fill: white; -fx-background-radius: 7;" />
+                        <Label layoutX="51.0" layoutY="30.0" text="ID:" />
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="30.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@res/icons8-key-50.png" />
+                            </image>
+                        </ImageView>
                     </children>
                 </AnchorPane>
                 <AnchorPane>

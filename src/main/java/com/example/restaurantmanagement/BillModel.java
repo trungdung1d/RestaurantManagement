@@ -5,7 +5,6 @@ public class BillModel {
     Double VAT, Price, TotalPrice;
 
     public BillModel() {
-
     }
 
     public BillModel(String ID, String date, String amount, Double VAT, Double price, Double totalPrice) {

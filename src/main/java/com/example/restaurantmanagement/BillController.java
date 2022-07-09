@@ -52,6 +52,9 @@ public class BillController implements Initializable {
     private TableColumn<BillModel, Double> totalPriceCol;
 
     @FXML
+    private TableColumn actionCol;
+
+    @FXML
     private TextField search;
 
     private ObservableList<BillModel> Table = FXCollections.observableArrayList();
@@ -71,6 +74,7 @@ public class BillController implements Initializable {
         priceCol.setCellValueFactory(new PropertyValueFactory<BillModel, Double>("Price"));
         totalPriceCol.setCellValueFactory(new PropertyValueFactory<BillModel, Double>("TotalPrice"));
         showTable();
+        actionButtons();
     }
 
     public void showTable(){
@@ -113,14 +117,8 @@ public class BillController implements Initializable {
                 } else return search.getDate().toLowerCase().contains(searchKeyword); // Filter matches Room Email
             });
         });
-        // 3. Wrap the FilteredList in a SortedList.
         SortedList<BillModel> sortedData = new SortedList<>(filteredData);
-
-        // 4. Bind the SortedList comparator to the TableView comparator.
-        // 	  Otherwise, sorting the TableView would have no effect.
         sortedData.comparatorProperty().bind(billTable.comparatorProperty());
-
-        // 5. Add sorted (and filtered) data to the table.
         billTable.setItems(sortedData);
     }
 
@@ -162,6 +160,153 @@ public class BillController implements Initializable {
                 Table.add(bill);
                 billTable.setItems(Table);
 
+            }
+
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            DBConnection.closeConnections();
+        }
+    }
+
+    private void actionButtons() {
+        Callback<TableColumn<BillModel, String>, TableCell<BillModel, String>> cellCallback =
+                new Callback<TableColumn<BillModel, String>, TableCell<BillModel, String>>() {
+                    @Override
+                    public TableCell<BillModel, String> call(TableColumn<BillModel, String> param) {
+
+                        TableCell<BillModel, String> cell = new TableCell<BillModel, String>() {
+
+                            Button editbtn = new Button("Edit");
+                            Button deletebtn = new Button("Delete");
+                            public HBox hBox = new HBox(25, editbtn, deletebtn);
+
+                            @Override
+                            protected void updateItem(String item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty){
+                                    setGraphic(null);
+                                    setText(null);
+                                }else{
+
+                                    deletebtn.setStyle(
+                                            " -fx-cursor: hand ;"
+                                                    + "-glyph-size:20px;"
+                                                    + "-fx-fill:#ffffff;"
+                                    );
+
+                                    deletebtn.setOnMouseEntered((MouseEvent event) ->{
+                                        deletebtn.setStyle(
+                                                " -fx-cursor: hand ;"
+                                                        +
+                                                        "-glyph-size:20px;"
+                                                        +"-fx-fill:khaki;"
+                                        );
+                                    });
+
+                                    deletebtn.setOnMouseExited((MouseEvent event2) ->{
+                                        deletebtn.setStyle(
+                                                " -fx-cursor: hand ;"
+                                                        +
+                                                        "-glyph-size:20px;"
+                                                        + "-fx-fill:white;"
+                                        );
+                                    });
+
+                                    deletebtn.setOnMouseClicked((MouseEvent event2) ->{
+                                        deletebtn.setStyle(
+                                                " -fx-cursor: hand ;"
+                                                        +
+                                                        "-glyph-size:20px;"
+                                                        +"-fx-fill:lightgreen;"
+                                        );
+
+                                        //delete sql statements
+                                        BillModel bllTable = getTableView().getItems().get(getIndex());
+                                        tableRowDelete(bllTable);
+                                    });
+
+                                    editbtn.setStyle(
+                                            " -fx-cursor: hand ;"
+                                                    + "-glyph-size:20px;"
+                                                    + "-fx-fill:#ffffff;"
+                                    );
+
+                                    editbtn.setOnMouseEntered((MouseEvent event) ->{
+                                        editbtn.setStyle(
+                                                " -fx-cursor: hand ;"
+                                                        +
+                                                        "-glyph-size:20px;"
+                                                        +"-fx-fill:khaki;"
+                                        );
+                                    });
+
+                                    editbtn.setOnMouseExited((MouseEvent event2) ->{
+                                        editbtn.setStyle(
+                                                " -fx-cursor: hand ;"
+                                                        +
+                                                        "-glyph-size:20px;"
+                                                        + "-fx-fill:white;"
+                                        );
+                                    });
+
+                                    editbtn.setOnMouseClicked((MouseEvent event2) ->{
+                                        editbtn.setStyle(
+                                                " -fx-cursor: hand ;"
+                                                        +
+                                                        "-glyph-size:20px;"
+                                                        +"-fx-fill:lightgreen;"
+                                        );
+                                        BillModel bllTable = getTableView().getItems().get(getIndex());
+                                        editInfo(bllTable);
+
+                                    });
+
+                                    hBox.setStyle("-fx-alignment:center");
+                                    setGraphic(hBox);
+                                }
+                            }
+                        };
+
+                        return cell;
+                    }
+                };
+        actionCol.setCellFactory(cellCallback);
+    }
+
+    public void tableRowDelete(BillModel bllTable) {
+        Connection connection = DBConnection.getConnections();
+        try {
+            if (!connection.isClosed()) {
+                String sql = "DELETE FROM bill where ID=?";
+                PreparedStatement statement = connection.prepareStatement(sql);
+                statement.setString(1, bllTable.getID());
+                statement.execute();
+                Main.showAlert(Alert.AlertType.INFORMATION, "Delete Operation Successful", "Bill " + bllTable.getID() + " is deleted from database!");
+                billTable.getItems().remove(bllTable);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            DBConnection.closeConnections();
+        }
+    }
+
+    public void editInfo(BillModel bll) {
+        Connection connection = DBConnection.getConnections();
+        try {
+            if (!connection.isClosed()) {
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(Main.class.getResource("BillInfoEdit.fxml"));
+                Parent viewContact = loader.load();
+                Scene scene = new Scene(viewContact);
+                BillEditController1 bll1 = loader.getController();
+                bll1.setBillInfo(bll);
+                Stage window = new Stage();
+                window.setScene(scene);
+                window.initStyle(StageStyle.UNDECORATED);
+                stagePosition(window, viewContact);
+                window.showAndWait();
             }
 
         } catch (SQLException | IOException throwables) {
